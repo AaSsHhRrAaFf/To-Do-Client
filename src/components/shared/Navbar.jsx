@@ -13,7 +13,7 @@ const Navbar = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
-  const profileImage = user?.photoURL || "/public/default-avatar.jpg"; 
+  const profileImage = user?.photoURL || "/default-avatar.jpg"; 
 
   return (
     <div>
