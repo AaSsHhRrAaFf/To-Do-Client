@@ -1,4 +1,4 @@
-// D:\PH-Assignments\Job-Task\task-management\src\AuthProvider.jsx
+
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { auth, googleProvider } from "./firebase";
 import { signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
