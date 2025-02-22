@@ -21,7 +21,7 @@ const TaskForm = ({ tasks, onSubmit }) => {
   const { mutate } = useMutation({
     mutationFn: (newTask) => axios.post("/tasks", newTask),
     onSuccess: () => {
-      queryClient.invalidateQueries(["tasks", user?.uid]); // Match App.jsx queryKey
+      queryClient.invalidateQueries(["tasks", user?.uid]); 
       toast.success("Task added successfully! 🎉");
       setIsModalOpen(false);
       setTitle("");
@@ -53,6 +53,7 @@ const TaskForm = ({ tasks, onSubmit }) => {
       category,
       order: tasks.length,
       timestamp: new Date(),
+      userId: user.uid,
     };
     mutate(newTask);
   };
