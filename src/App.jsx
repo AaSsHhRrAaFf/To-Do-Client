@@ -161,7 +161,7 @@ function App() {
 
   // WebSocket setup for real-time updates
   useEffect(() => {
-    const socket = io("http://localhost:5000");
+    const socket = io(import.meta.env.VITE_API_URL);
     socket.on("tasksUpdated", () => {
       queryClient.invalidateQueries(["tasks", user?.uid]);
     });
